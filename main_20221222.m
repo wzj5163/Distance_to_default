@@ -16,6 +16,9 @@ Data = table(Stock_inx,Market_value, Debt,'VariableNames',{'Stock_inx','Market_v
 [SIGMA, DtDSet, ValueSet] = Distance_to_Default(Data,1,0.01);
 Data_new=Data;
 Data_new.Sigma=SIGMA;Data_new.D2D=DtDSet;Data_new.Asset_value=ValueSet;
+Data_new.trade_date=raw_data1.trade_date;
+Data_new.trade_date=raw_data1.trade_date;
+Data_new.year=raw_data1.year;
 
 % to check if there exists NaN
 sum(isnan(SIGMA)) 
